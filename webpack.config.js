@@ -5,14 +5,14 @@ module.exports = {
     mode: 'development',
     entry: './src/main/index.tsx',
     output: {
-        path: path.join(__dirname, 'public/js'),
+        path: path.resolve(__dirname, 'public/js'),
         publicPath: '/public/js',
         filename: 'boundle.js'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', 'scss'],
         alias: {
-            '@': path.join(__dirname, 'src')
+            '@': path.resolve(__dirname, 'src')
         }
     },
     module: {
@@ -35,9 +35,11 @@ module.exports = {
         }]
     },
     devServer: {
-        contentBase: './public',
-        writeToDisK: true,
-        historyApiFallback: true
+        historyApiFallback: true,
+        static: {
+            directory: path.resolve(__dirname, './public'),
+          },
+          
     },
     externals: {
         react: 'React',
