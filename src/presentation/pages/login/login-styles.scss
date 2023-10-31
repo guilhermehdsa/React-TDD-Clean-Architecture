@@ -1,4 +1,4 @@
-@import "../../styles//colors.scss";
+@import "../../styles/colors.scss";
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -44,23 +44,6 @@ button {
     height: 100vh;
     justify-content: space-between;
 
-    .header {
-        display: flex;
-        flex-direction: column;
-        border-top: 40px solid $primaryDark;
-        background-color: $primary;
-        align-items: center;
-        
-        img {
-            margin-top: 40px;
-        }
-
-        h1 {
-            color: $white;
-            margin: 16px 0px 40px;
-        }
-    }
-
     .form {
         display: flex;
         flex-direction: column;
@@ -78,58 +61,35 @@ button {
             text-transform: uppercase;
         }
 
-        .inputWrap {
-            margin-top: 16px;
+        .errorWrap {
             display: flex;
-            position: relative;
+            flex-direction: column;
             align-items: center;
 
-            input {
-                flex-grow: 1px;
+            .spinner {
+                margin-top: 30px;
             }
 
-            .status {
-                position: absolute;
-                right: 8px;
-                font-size: 12px;
-                cursor: help;
-            }
-
-            .submit {
-                margin-top: 32px;
-            }
-
-            .link {
-                text-align: center;
-                color: $primary;
-                text-transform: lowercase;
-                margin-top: 16px;
-                cursor: pointer;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-
-            .errorWrap {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                .spinner {
-                    margin-top: 30px;
-                }
-
-                .error {
-                    margin-top: 30px;
-                    color: $primaryLight;
-                }
+            .error {
+                margin-top: 30px;
+                color: $primaryLight;
             }
         }
-    }
 
-    .footer {
-        background-color: $primary;
-        height: 48px;
+        .submit {
+            margin-top: 32px;
+        }
+        
+        .link {
+            text-align: center;
+            color: $primary;
+            text-transform: lowercase;
+            margin-top: 16px;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }

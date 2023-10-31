@@ -35,12 +35,13 @@ module.exports = {
         }]
     },
     devServer: {
-        historyApiFallback: true,
         static: {
-            directory: path.resolve(__dirname, './public'),
+            directory: path.join(__dirname, "./public")
           },
-          
-    },
+        open: true,
+        port: 9000,
+        historyApiFallback: true
+      },
     externals: {
         react: 'React',
         'react-dom': 'ReactDOM'
