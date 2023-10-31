@@ -3,12 +3,14 @@
     display: flex;
     position: relative;
     align-items: center;
+
     input {
-        flex-grow: 1px;
+        flex-grow: 1;
     }
+
     .status {
         position: absolute;
-        right: 0px;
+        right: 8px;
         font-size: 12px;
         cursor: help;
     }

@@ -11,4 +11,5 @@ const Input: React.FC<Props> = (props: Props) => {
         </div>
     )
 }
+
 export default Input;
